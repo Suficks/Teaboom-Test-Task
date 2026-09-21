@@ -1,0 +1,157 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.product {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'gallery'
+    'info';
+  gap: 20px;
+  padding-bottom: 48px;
+
+  @include tablet {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      'gallery header'
+      'gallery info';
+    gap: 0 32px;
+    align-items: start;
+  }
+
+  @include desktop {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 56px;
+    padding-bottom: 80px;
+  }
+
+  &__header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+
+    @include tablet {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__figure {
+    grid-area: gallery;
+    overflow: hidden;
+    background: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+
+    @include tablet {
+      position: sticky;
+      top: 24px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+
+  &__info {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  &__category {
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $color-text-muted;
+
+    &:hover {
+      color: $color-heading;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $color-heading;
+
+    @include tablet {
+      font-size: 28px;
+    }
+
+    @include desktop {
+      font-size: 32px;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 16px;
+    font-size: 13px;
+    color: $color-text-muted;
+  }
+
+  &__stock {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    color: $color-success;
+
+    &::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  &__description {
+    padding: 20px;
+    background: $color-accent-soft;
+    border-radius: $radius-md;
+
+    @include desktop {
+      padding: 24px;
+    }
+
+    p + p {
+      margin-top: 12px;
+    }
+  }
+
+  &__description-title {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: $color-heading;
+  }
+
+  &__composition {
+    font-size: 13px;
+    color: $color-text-muted;
+
+    strong {
+      color: $color-text;
+    }
+  }
+}

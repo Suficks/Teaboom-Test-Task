@@ -1,0 +1,25 @@
+// Палитра Teaboom.ru
+$color-bg: #fbfbfb;
+$color-surface: #fff;
+$color-text: #444;
+$color-text-muted: #808080;
+$color-heading: #202020;
+$color-border: #e6e6e6;
+$color-accent: #f5d730;
+$color-accent-hover: #ecc70f;
+$color-accent-soft: #fdf8dc;
+$color-price: #d7261e;
+$color-success: #3a8f3a;
+
+$font-family: 'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+$radius-sm: 4px;
+$radius-md: 8px;
+
+$container-max: 1200px;
+
+$transition: 0.2s ease;
+
+// Брейкпоинты (mobile-first)
+$bp-tablet: 768px;
+$bp-desktop: 1024px;

@@ -1,0 +1,42 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 28px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: $radius-sm;
+  transition:
+    background-color $transition,
+    box-shadow $transition,
+    transform $transition;
+
+  @include focus-ring;
+
+  &__icon {
+    flex-shrink: 0;
+  }
+
+  &--primary {
+    color: $color-heading;
+    background: $color-accent;
+
+    &:hover {
+      background: $color-accent-hover;
+      box-shadow: 0 6px 16px rgba($color-accent, 0.45);
+    }
+
+    &:active {
+      transform: translateY(1px);
+      box-shadow: none;
+    }
+  }
+}

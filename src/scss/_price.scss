@@ -1,0 +1,63 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.purchase {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+
+  @include desktop {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+  }
+
+  &__button {
+    width: 100%;
+
+    @include desktop {
+      width: auto;
+      min-width: 200px;
+    }
+  }
+}
+
+.price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  line-height: 1.1;
+
+  &__current {
+    font-size: 28px;
+    font-weight: 700;
+    color: $color-price;
+    font-variant-numeric: tabular-nums;
+
+    @include desktop {
+      font-size: 32px;
+    }
+  }
+
+  &__old {
+    font-size: 16px;
+    color: $color-text-muted;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__discount {
+    align-self: center;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: $color-surface;
+    background: $color-price;
+    border-radius: $radius-sm;
+  }
+}

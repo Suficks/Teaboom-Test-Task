@@ -1,0 +1,67 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.site-header {
+  background: $color-surface;
+  border-bottom: 1px solid $color-border;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 64px;
+
+    @include tablet {
+      min-height: 80px;
+    }
+  }
+
+  &__phone {
+    font-weight: 600;
+    white-space: nowrap;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: $color-heading;
+
+  &__mark {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: $color-heading;
+    background: $color-accent;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+
+  &__subtitle {
+    display: none;
+    font-size: 12px;
+    color: $color-text-muted;
+
+    @include tablet {
+      display: block;
+    }
+  }
+}
