@@ -25,7 +25,7 @@ npm run preview  # просмотр собранной версии
 
 ```
 index.html               разметка страницы
-public/favicon.svg       иконка сайта
+public/logo.svg          логотип, используется в шапке и как favicon
 src/
   main.js                точка входа: подключает стили и инициализирует карточку
   js/

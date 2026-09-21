@@ -3,4 +3,5 @@
   <path d="M14 26h30a5 5 0 0 1 5 5v2a13 13 0 0 1-13 13H27a13 13 0 0 1-13-13v-7Z" fill="#202020"/>
   <path d="M49 30h3a4 4 0 0 1 0 8h-3" fill="none" stroke="#202020" stroke-width="3.5"/>
   <path d="M12 51h40" stroke="#202020" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M24 21c0-3 3-4 3-6.5s-3-3.5-3-6.5M35 21c0-3 3-4 3-6.5s-3-3.5-3-6.5" fill="none" stroke="#202020" stroke-width="3" stroke-linecap="round"/>
 </svg>

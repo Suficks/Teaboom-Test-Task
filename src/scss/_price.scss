@@ -12,6 +12,7 @@
 
   @include desktop {
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 20px 24px;
@@ -21,18 +22,18 @@
     width: 100%;
 
     @include desktop {
+      flex: 1 0 200px;
       width: auto;
-      min-width: 200px;
     }
   }
 }
 
 .price {
   display: flex;
-  flex-wrap: wrap;
   align-items: baseline;
-  gap: 4px 12px;
+  gap: 12px;
   line-height: 1.1;
+  white-space: nowrap;
 
   &__current {
     font-size: 28px;
