@@ -3,6 +3,8 @@
 Верстка верхней части карточки товара «Ананасовый улун» для интернет-магазина
 [Teaboom.ru](https://teaboom.ru/product/ananasovij-ulun).
 
+- Опубликованная страница: https://teaboom.netlify.app
+
 ## Запуск
 
 ```bash
